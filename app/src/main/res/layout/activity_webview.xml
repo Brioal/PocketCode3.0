@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/web_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/web_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:drawingCacheQuality="high"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:theme="@style/WhiteToolBar"
+            app:titleTextColor="@color/colorWhite" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/web_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorWhite">
+
+            <com.brioal.brioallib.view.CircleImageView
+                android:id="@+id/web_author_head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_default_head" />
+
+            <TextView
+                android:id="@+id/web_author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="名称"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/web_author_btn_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/add_attention_bg"
+                android:text="关注"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <com.brioal.brioallib.view.ProgressWebView
+            android:id="@+id/web_webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/web_bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        app:layout_scrollFlags="scroll|enterAlways|snap">
+
+        <EditText
+            android:id="@+id/web_commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_msg"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="查看评论"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+
+        <CheckBox
+            android:id="@+id/web_parise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/ic_parise"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/web_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/ic_collect"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
